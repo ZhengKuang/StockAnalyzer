@@ -73,8 +73,10 @@ Output:
 ### Scala 
 
  - Install & Environment setup
+ 
+http://scala-lang.org/download/
 
-http://www.runoob.com/scala/scala-install.html
+http://scala-lang.org/download/install.html
 
  - Check
 
