@@ -2,7 +2,7 @@
 a stock analyser using docker, kafka, cassandra, redis and node.js 
 ## Overview of the Project 
 
-![Image of Yaktocat](https://github.com/ZhengKuang/StockAnalyzer/blob/master/images/overview.JPG)
+![Image of overview](https://github.com/ZhengKuang/StockAnalyzer/blob/master/images/overview.JPG)
 
 ## Environment Setup for Windows
 ### Docker Toolbox
@@ -18,6 +18,8 @@ Open your cmd, and input
 docker-machine ls
 ```
 Output:
+
+![Image of docker](https://github.com/ZhengKuang/StockAnalyzer/blob/master/images/docker-machine%20ls.JPG)
 
 ### Python 2.7.10（Pip automatically included）
 
@@ -38,6 +40,9 @@ python
 pip --version
 ```
 Output:
+
+![Image of python](https://github.com/ZhengKuang/StockAnalyzer/blob/master/images/python.JPG)
+
 ### Java 1.7.0_79
 
  - Install
@@ -60,6 +65,11 @@ javac -version
 javac
 ```
 Output:
+
+![Image of Java](https://github.com/ZhengKuang/StockAnalyzer/blob/master/images/Java.JPG)
+
+![Image of Javac](https://github.com/ZhengKuang/StockAnalyzer/blob/master/images/javac.JPG)
+
 ### Scala 
 
  - Install & Environment setup
@@ -73,6 +83,9 @@ Open your cmd, and input:
 scala -version
 ```
 Output:
+
+![Image of scala](https://github.com/ZhengKuang/StockAnalyzer/blob/master/images/scala.JPG)
+
 ### Sbt
 
  - Install
@@ -86,6 +99,8 @@ Open your cmd, and input
 sbt sbtVersion
 ```
 Output:
+
+![Image of sbt](https://github.com/ZhengKuang/StockAnalyzer/blob/master/images/sbt.JPG)
 
 ## Quick Start 
 
