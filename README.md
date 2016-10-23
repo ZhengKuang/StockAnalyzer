@@ -2,7 +2,7 @@
 a stock analyser using docker, kafka, cassandra, redis and node.js 
 ## Overview of the Project 
 
-![Image of overview](https://github.com/ZhengKuang/StockAnalyzer/blob/master/images/overview.JPG)
+![Image of overview](https://github.com/ZhengKuang/StockAnalyzer/blob/master/images/overview.gif)
 
 ## Environment Setup for Windows
 ### Docker Toolbox
