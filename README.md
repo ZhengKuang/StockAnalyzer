@@ -104,5 +104,38 @@ Output:
 
 ![Image of sbt](https://github.com/ZhengKuang/StockAnalyzer/blob/master/images/sbt.JPG)
 
-## Quick Start 
+
+# Quick Start & StockAnalyzer Review
+
+首先是要打开docker-machine
+```
+docker-machine start bigdata
+```
+然后windows下面打开命令切换环境
+```
+FOR /f "tokens=*" %i IN ('docker-machine env --shell cmd bigdata') DO %i
+```
+
+首先建立kafka的data_producer，从google_finace里面采集股票的信息：
+```
+python data_producer.py AAPL stock-analyzer 192.168.99.100:9092
+```
+然后启动cassandra的data_storage.py,从kafka里面拿取数据并且保存到cassandra里面
+```
+python data_storage.py stock-analyzer 192.168.99.100:9092 stock stock 192.168.99.100
+```
+然后启动spark，从kafka的stock-analyzer里面拿取数据，并且求每五秒的平均，然后存放到kafka的stock-average-price的topic中
+```
+spark-submit --jars spark-streaming-kafka-0-8-assembly_2.11-2.0.0.jar stream_process.py 192.168.99.100:9092  stock-analyzer stock-average-price
+```
+然后启动redis的py文件，从kafka的stock-average-price中拿取数据，存放到redis的stock-price这个channel中
+```
+python redis-publisher.py stock-average-price 192.168.99.100:9092 stock-price 192.168.99.100 6379
+```
+
+启动application里面的nodejs模块的index.js，监听redis，consumeredis里面的stock-price这个channel
+```
+node index.js --port=3000 --redis_host=192.168.99.100 --redis_port=6379 --subscribe_channel=stock-price
+```
+
 
