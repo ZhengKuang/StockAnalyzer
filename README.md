@@ -1,5 +1,6 @@
 #StockAnalyzer
-a stock analyser using docker, kafka, cassandra, redis and node.js 
+Hi, this is my project!
+a real time stock analyser using docker, kafka, cassandra, redis and node.js 
 ## Overview of the Project 
 
 ![Image of overview](https://github.com/ZhengKuang/StockAnalyzer/blob/master/images/overview.gif)
